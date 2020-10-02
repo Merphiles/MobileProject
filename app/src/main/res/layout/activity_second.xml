@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityOne1"
+    android:background="@color/blue">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="160dp"
+        android:layout_height="67dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="221dp"
+        app:srcCompat="@drawable/my_anime_list" />
+
+
+    <LinearLayout
+        android:layout_width="321dp"
+        android:layout_height="625dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="47dp"
+            android:fontFamily="@font/googlesans_italic"
+            android:text="Список любимых (выбор из списка)"
+            android:textSize="15dp" />
+
+        <Spinner
+            android:id="@+id/choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/anime_list" />
+        <ImageView
+            android:id="@+id/change"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars = "vertical"
+            android:fillViewport="true"
+            android:text="TextView" />
+    </LinearLayout>
+
+
+</RelativeLayout>
