@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
             case R.id.act3:
-                i = new Intent(this, DontAskWhyIUseThis.class);
+                i = new Intent(this, Activity_Videos.class);
                 startActivity(i);
                 break;
         }
