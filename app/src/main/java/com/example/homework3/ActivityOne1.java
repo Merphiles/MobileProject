@@ -1,6 +1,8 @@
 package com.example.homework3;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -33,7 +35,7 @@ public class ActivityOne1 extends AppCompatActivity implements View.OnClickListe
 
         items = FileHelper.readData(this);
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        adapter = new ArrayAdapter<String>(this, R.layout.row, items);
         itemsList.setAdapter(adapter);
 
         btn.setOnClickListener(this);
@@ -43,14 +45,12 @@ public class ActivityOne1 extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
-            case R.id.add_btn:
-                String itemEntered = itemET.getText().toString();
-                adapter.add(itemEntered);
-                itemET.setText("");
-                FileHelper.writeData(items, this);
-                Toast.makeText(this, "Item Added", Toast.LENGTH_SHORT).show();
-                break;
+        if (v.getId() == R.id.add_btn) {
+            String itemEntered = itemET.getText().toString();
+            adapter.add(itemEntered);
+            itemET.setText("");
+            FileHelper.writeData(items, this);
+            Toast.makeText(this, "Item Added", Toast.LENGTH_SHORT).show();
         }
     }
 
